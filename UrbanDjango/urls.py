@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.core.management.commands.runserver import naiveip_re
 from django.urls import path, include
-from task2.views import ClassBasedView, function_based_view
+from task2.views import class_based_view, function_based_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('class-view/', ClassBasedView.as_view(), name='class_view'),
+    path('class-view/', class_based_view, name='class_view'),
     path('function-view/', function_based_view, name='function_view'),
 ]
