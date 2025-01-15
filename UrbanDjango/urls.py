@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.core.management.commands.runserver import naiveip_re
 from django.urls import path, include
 from task2.views import class_based_view, function_based_view
+from task3.views import main_page, second_page, third_page
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('class-view/', class_based_view, name='class_view'),
-    path('function-view/', function_based_view, name='function_view'),
+    path('', main_page),
+    path('main-page/', main_page, name='main_page'),
+    path('second-page/', second_page, name='second_page'),
+    path('third-page/', third_page, name='third_page'),
+    #path('class-view/', class_based_view, name='class_view'),
+    #path('function-view/', function_based_view, name='function_view'),
 ]
