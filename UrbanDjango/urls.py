@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.core.management.commands.runserver import naiveip_re
 from django.urls import path, include
 from task2.views import class_based_view, function_based_view
-from task3.views import main_page, second_page, third_page
+#from task3.views import main_page, second_page, third_page
+from task4.views import main_page, second_page, third_page
 
 urlpatterns = [
     path('', main_page),

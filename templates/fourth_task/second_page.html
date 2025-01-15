@@ -1,0 +1,35 @@
+{% extends "fourth_task/menu.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+        {{ block.super }}
+        {% endblock %}
+    </header>
+
+    <menu>
+        {% block menu %}
+        {{ block.super }}
+        {% endblock %}
+    </menu>
+
+    <content>
+        {% block content %}
+        {{ block.super }}
+        <ul>
+            {% for key, value in game.items %}
+                {% for i in value %}
+                    <li>{{ i }} <button>{{ buy }}</button></li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+        <button><a href="/main-page"><p align="center">{{ back }}</p></a></button>
+        {% endblock %}
+    </content>
+</body>
+</html>
